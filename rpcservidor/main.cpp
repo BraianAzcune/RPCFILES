@@ -7,8 +7,11 @@
 #include <iostream>
 #include <sstream> //std::stringstream
 
-
-#include <unistd.h>
+//prueba para dormir durante un tiempo un hilo dentro de mutex.
+#include <chrono>
+#include <thread>
+#include <mutex>
+std::mutex mtx; // mutex for critical section
 
 using namespace std;
 
@@ -17,7 +20,9 @@ string entregar_archivo_generico(string noLouso){
 
     cout<<"ID thread: "<<pthread_self();
 
-    usleep(500000);
+    //etrar mutex.
+    mtx.lock();
+    std::this_thread::sleep_for(std::chrono::milliseconds(6000));
 
     cout<<"Se pidio el archivo "<<noLouso<<" se ignora\n";
 
@@ -28,9 +33,13 @@ string entregar_archivo_generico(string noLouso){
     strStream << inFile.rdbuf(); //read the file
     string str = strStream.str(); //str holds the content of the file
 
-    cout << str << "\n"; //you can do anything with the string!!!
+    //cout << str << "\n"; //you can do anything with the string!!!
 
     inFile.close();
+
+    mtx.unlock();
+    //salir mutex
+
     return str;
 }
 
@@ -44,6 +53,10 @@ int main() {
 
   srv.bind("adquirir_archivo",&entregar_archivo_generico);
 
-  srv.run();
+
+  constexpr size_t thread_count = 2;
+  srv.async_run(thread_count);
+  cin.ignore();
+
   return 0;
 }
