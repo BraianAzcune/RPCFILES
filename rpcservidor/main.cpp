@@ -25,33 +25,38 @@ ManejadorArchivos* manejadorArchivos;
 
 
 
-mutex bloqueoAdquirirTotal;
+
 string adquirir_archivo(string path){
-    bloqueoAdquirirTotal.lock();
+
+
+
     cout<<"ID thread: "<<pthread_self();
     ARCHIVO archivoRespuesta=manejadorArchivos->obtenerArchivo(path);
-    bloqueoAdquirirTotal.unlock();
+
     return archivoRespuesta.puntero;
 }
 
+void liberar_archivo(string nombreArchivo){
 
+    manejadorArchivos->me->mapaDeMutex[nombreArchivo].unlock();
+}
 
 
 int main() {
+
+
 
     //INICIALIZAMOS MANEJADORARCHVIO.
     manejadorArchivos= new ManejadorArchivos();
 
     rpc::server srv(8080);
 
-    srv.bind("echo", [](string const& s) {
-        return string("> ") + s;
-    });
 
     srv.bind("adquirir_archivo",&adquirir_archivo);
 
+    srv.bind("liberar_archivo",&liberar_archivo);
 
-    constexpr size_t thread_count = 2;
+    constexpr size_t thread_count = 8;
     srv.async_run(thread_count);
     cin.ignore();
 

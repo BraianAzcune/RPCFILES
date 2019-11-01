@@ -84,9 +84,15 @@ ARCHIVO ManejadorArchivos::cargarArchivo(string path)
 
     if(manejadorArchivo.is_open()){
 
+        this->me->mapaDeMutex[path].lock();
+
+        archivo.idSession=rpc::this_session().id();
+
         archivo.puntero= new char[archivo.size];//pedimos de forma dinamica la cantidad de memoria, justa para almacenar el archivo.
 
         manejadorArchivo.read(archivo.puntero,archivo.size);//Leemos de a bloques, hasta llenar el tamaño
+
+
 
 
         //NOTIFICACION DE ERRORES

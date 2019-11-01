@@ -18,6 +18,8 @@
 #include <queue>
 #include <list>
 
+#include <mutex>
+
 using namespace std;
 
 class ManejadorCache
@@ -42,6 +44,12 @@ public:
     ManejadorCache();
 
     virtual ~ManejadorCache();
+
+
+    /**
+    *Contiene clave,valor donde la clave es el path del archivo, y el valor es el mutex, asociado.
+    */
+    map<string, mutex> mapaDeMutex;
 
 private:
     /**

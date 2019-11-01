@@ -17,7 +17,7 @@ public:
     /**
      * Devuelve un struct ARCHIVO.
      * si el archivo no se encontro, sera NULL.
-     * 
+     *
      * @param path
      */
     struct ARCHIVO obtenerArchivo(string path);
@@ -26,21 +26,24 @@ public:
     * Constructor, crea ManejadorCache
     */
     ManejadorArchivos();
-    
+
     /**
      * Destructor
      */
     virtual ~ManejadorArchivos();
 
-private:
-    
+
     /**
      * Es un puntero
-     *Se incializa en el constructor 
+     *Se incializa en el constructor
      * Se elimina en el destructor
      */
     ManejadorCache* me;
-    
+
+private:
+
+
+
     /**
     * consulta si el archivo existe en disco.
     * (SOLO RUTAS RELATIVAS)

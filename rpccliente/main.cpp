@@ -41,7 +41,8 @@ int main() {
                 }
                 break;
             case 3:
-                cout<<"no implementado";
+                c.call("liberar_archivo",nombre_archivo);
+                cout<<"\nArchivo Liberado\n";
                 break;
             case 9:
                 //hay que llamar al servidor, para liberar cualquier archivo que tengamos.

@@ -33,6 +33,13 @@ ARCHIVO ManejadorCache::consultaArchivo(string direccionArchivo) {
         //no ta en cache
     }
     else {
+
+
+        //BLOQUEAR ARCHIVO
+        this->mapaDeMutex[direccionArchivo].lock();
+        //ASIGNAR TU ID AL ARCHIVO.
+        file.idSession=rpc::this_session().id();
+
         file.puntero=itr->second.puntero;
         file.size=itr->second.size;
         cola.remove(direccionArchivo);
@@ -84,7 +91,7 @@ ManejadorCache::ManejadorCache() {
     cache.clear(); //por las dudas
     this->sizeCache=0;
 
-    this->maxSizeCache=Utilidades::MAX_SIZE512M;
+    this->maxSizeCache=Utilidades::MAX_SIZE512M*2;
 
 }
 

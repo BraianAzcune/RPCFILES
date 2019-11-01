@@ -3279,7 +3279,7 @@
 
 1572577440 /home/braian/Escritorio/rpcgen/rpclib/include/rpc/detail/pimpl.h
 
-1572633440 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/main.cpp
+1572642107 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/main.cpp
 	"rpc/server.h"
 	<string>
 	"ManejadoresArchivoCache/ManejadorArchivos.h"
@@ -6564,10 +6564,10 @@
 
 1572577440 /home/braian/Escritorio/rpcgen/RPCFILES/rpclib/include/rpc/detail/pimpl.h
 
-1572633678 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.cpp
+1572641668 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.cpp
 	"ManejadorArchivos.h"
 
-1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.h
+1572642658 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.h
 	<iostream>
 	<string>
 	<fstream>
@@ -6575,10 +6575,11 @@
 	"ManejadorCache.h"
 	"Utilidades.h"
 
-1572633021 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ARCHIVO.h
+1572638824 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ARCHIVO.h
 	<sys/types.h>
+	"rpc/this_session.h"
 
-1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.h
+1572640064 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.h
 	<list>
 	<iterator>
 	<map>
@@ -6590,6 +6591,7 @@
 	<map>
 	<queue>
 	<list>
+	<mutex>
 
 1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/Utilidades.h
 	<string>
@@ -6598,9 +6600,13 @@
 	<iostream>
 	"ARCHIVO.h"
 
-1572633591 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.cpp
+1572640468 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.cpp
 	"ManejadorCache.h"
 
 1572631098 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/Utilidades.cpp
 	"Utilidades.h"
+
+1572577441 /home/braian/Escritorio/rpcgen/RPCFILES/rpclib/include/rpc/this_session.h
+	<atomic>
+	"rpc/config.h"
 
