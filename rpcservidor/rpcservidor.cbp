@@ -25,6 +25,13 @@
 			<Add library="../rpclib/build/librpc.a" />
 			<Add library="pthread" />
 		</Linker>
+		<Unit filename="ManejadoresArchivoCache/ARCHIVO.h" />
+		<Unit filename="ManejadoresArchivoCache/ManejadorArchivos.cpp" />
+		<Unit filename="ManejadoresArchivoCache/ManejadorArchivos.h" />
+		<Unit filename="ManejadoresArchivoCache/ManejadorCache.cpp" />
+		<Unit filename="ManejadoresArchivoCache/ManejadorCache.h" />
+		<Unit filename="ManejadoresArchivoCache/Utilidades.cpp" />
+		<Unit filename="ManejadoresArchivoCache/Utilidades.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

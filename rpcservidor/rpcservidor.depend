@@ -3279,13 +3279,14 @@
 
 1572577440 /home/braian/Escritorio/rpcgen/rpclib/include/rpc/detail/pimpl.h
 
-1572627588 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/main.cpp
+1572633440 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/main.cpp
 	"rpc/server.h"
 	<string>
+	"ManejadoresArchivoCache/ManejadorArchivos.h"
 	<fstream>
 	<iostream>
 	<sstream>
-	<unistd.h>
+	<mutex>
 
 1572577441 /home/braian/Escritorio/rpcgen/RPCFILES/rpclib/include/rpc/server.h
 	"rpc/config.h"
@@ -6562,4 +6563,44 @@
 1572577440 /home/braian/Escritorio/rpcgen/RPCFILES/rpclib/include/rpc/dispatcher.inl
 
 1572577440 /home/braian/Escritorio/rpcgen/RPCFILES/rpclib/include/rpc/detail/pimpl.h
+
+1572633678 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.cpp
+	"ManejadorArchivos.h"
+
+1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorArchivos.h
+	<iostream>
+	<string>
+	<fstream>
+	"ARCHIVO.h"
+	"ManejadorCache.h"
+	"Utilidades.h"
+
+1572633021 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ARCHIVO.h
+	<sys/types.h>
+
+1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.h
+	<list>
+	<iterator>
+	<map>
+	"Utilidades.h"
+	<cstddef>
+	<hash_map>
+	<iostream>
+	"ARCHIVO.h"
+	<map>
+	<queue>
+	<list>
+
+1572631098 /home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/Utilidades.h
+	<string>
+	<sys/types.h>
+	<sys/stat.h>
+	<iostream>
+	"ARCHIVO.h"
+
+1572633591 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/ManejadorCache.cpp
+	"ManejadorCache.h"
+
+1572631098 source:/home/braian/Escritorio/rpcgen/RPCFILES/rpcservidor/ManejadoresArchivoCache/Utilidades.cpp
+	"Utilidades.h"
 
